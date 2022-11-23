@@ -1,0 +1,28 @@
+.cursor::after {
+  content: '|';
+  color: #ccc;
+  display: inline-block;
+  background-color: #ccc;
+  width: 15px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ccc;
+  }
+  49% {
+    background-color: #ccc;
+  }
+  50% {
+    background-color: transparent;
+    visibility: hidden;
+  }
+  99% {
+    background-color: transparent;
+    visibility: hidden;
+  }
+  100% {
+    background-color: #ccc;
+  }
+}
