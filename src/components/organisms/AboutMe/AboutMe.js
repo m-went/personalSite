@@ -1,5 +1,5 @@
 import styles from './AboutMe.module.scss';
-import photo from '../../../assets/imgs/Red.jpg';
+import photo from '../../../assets/imgs/CV-zdjecie.jpg';
 
 function AboutMe(props) {
   return (

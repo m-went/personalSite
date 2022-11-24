@@ -1,5 +1,5 @@
 import styles from './Home.module.scss';
-import photo from '../../../assets/imgs/CV-zdjecie.jpg';
+import photo from '../../../assets/imgs/Red.jpg';
 import AnimatedText from '../../atoms/AnimatedText/AnimatedText';
 
 function Home(props) {
