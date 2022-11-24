@@ -1,0 +1,23 @@
+.skills {
+  height: 100vh;
+}
+
+.skillsList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50vw;
+}
+
+.skillsInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillsText {
+  width: 50vw;
+}

@@ -1,7 +1,8 @@
 .aboutMe {
   display: grid;
-  grid-template-columns: 2;
-  grid-template-rows: 2;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  height: 100vh;
 }
 
 .aboutTitle {
