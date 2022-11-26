@@ -17,7 +17,7 @@ function Projects(props) {
     return <SingleProject name={p.name} url={p.url} photo={p.photo} description={p.description} key={p.url} />;
   });
   return (
-    <div className={`${styles.projects}`}>
+    <div id="projects" className={`${styles.projects}`}>
       <h3>So, You want to see, what I have already done?</h3>
       {projects}
       <p className={`${styles.nextProjects}`}>And more to come...</p>

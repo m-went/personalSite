@@ -3,7 +3,7 @@ import photo from '../../../assets/imgs/CV-zdjecie.jpg';
 
 function AboutMe(props) {
   return (
-    <div className={`${styles.aboutMe}`}>
+    <div id="about-me" className={`${styles.aboutMe}`}>
       <h2 className={`${styles.aboutTitle}`}>A few words about me...</h2>
       <img className={`${styles.aboutPhoto}`} src={photo} alt="Yup, it's still me" />
       <p className={`${styles.aboutText}`}>

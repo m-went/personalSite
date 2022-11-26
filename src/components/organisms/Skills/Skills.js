@@ -73,7 +73,7 @@ function Skills(props) {
     );
   });
   return (
-    <div className={`${styles.skills}`}>
+    <div id="skills" className={`${styles.skills}`}>
       <h2>Ok Michał, show us what You got!</h2>
       <div className={`${styles.skillsInfo}`}>
         <div className={`${styles.skillsText}`}>

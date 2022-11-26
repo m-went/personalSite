@@ -4,7 +4,7 @@ import AnimatedText from '../../atoms/AnimatedText/AnimatedText';
 
 function Home(props) {
   return (
-    <div className={`${styles.home}`}>
+    <div id="home" className={`${styles.home}`}>
       <div className={`${styles.photoContainer}`}>{<img src={photo} alt="It's me, Mar...Michał!" />}</div>
       <AnimatedText />
       <ul>

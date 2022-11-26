@@ -11,7 +11,7 @@ body {
   background-color: rgb(43, 43, 43);
   background-size: cover;
   color: white;
-  padding: 20px;
+  padding: 0;
 }
 
 code {
@@ -31,4 +31,13 @@ html {
 a,
 button {
   font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
 }
