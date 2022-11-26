@@ -67,8 +67,8 @@ function Skills(props) {
 
   const skills = skillsArray.map((skill) => {
     return (
-      <li>
-        <SkillInfo key={skill.name} skillName={skill.name} icon={skill.icon} bgColor={skill.bgColor} />
+      <li key={skill.name}>
+        <SkillInfo skillName={skill.name} icon={skill.icon} bgColor={skill.bgColor} />
       </li>
     );
   });

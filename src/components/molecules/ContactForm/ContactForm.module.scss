@@ -1,0 +1,18 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin-top: 50px;
+  label {
+    margin: 10px 0;
+  }
+}
+
+.formButton {
+  width: 40%;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: none;
+  margin-left: auto;
+}

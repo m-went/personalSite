@@ -14,7 +14,7 @@ function Projects(props) {
     { name: 'My personal page', url: '/', photo: myPage, description: 'As You can see, page to show my humble person' },
   ];
   const projects = allProjects.map((p) => {
-    return <SingleProject name={p.name} url={p.url} photo={p.photo} description={p.description} />;
+    return <SingleProject name={p.name} url={p.url} photo={p.photo} description={p.description} key={p.url} />;
   });
   return (
     <div className={`${styles.projects}`}>
