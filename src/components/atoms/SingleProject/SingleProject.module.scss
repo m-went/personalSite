@@ -1,14 +1,27 @@
 @use '../../../responsiveStyles.module.scss';
 
 .singleProject {
-  margin-top: 50px;
+  margin: 50px 20% 0 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .projectInfo {
   position: relative;
+  position: relative;
+  align-self: flex-start;
+  padding-left: 2.5%;
 }
 
 .projectTab {
   width: 100%;
+}
+.imgContainer {
+  overflow: hidden;
+  max-height: 400px;
+  width: 100%;
+  width: 95%;
 }
 
 .projectInfo::after {
@@ -18,11 +31,13 @@
   background-color: white;
   height: 2px;
   content: '';
-  top: 40%;
+  top: 45%;
 }
-.projectInfo:hover::after {
-  transform-origin: left;
-  animation: 0.7s drawAnimation linear 1;
+.singleProject:hover {
+  .projectInfo::after {
+    transform-origin: left;
+    animation: 0.7s drawAnimation linear 1;
+  }
 }
 
 .projectName {

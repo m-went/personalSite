@@ -3,7 +3,7 @@ import photo from '../../../assets/imgs/CV-zdjecie.jpg';
 
 function AboutMe(props) {
   return (
-    <div id="about-me" className={`${styles.aboutMe}`}>
+    <div className={`${styles.aboutMe}`}>
       <h2 className={`${styles.aboutTitle}`}>A few words about me...</h2>
       <img className={`${styles.aboutPhoto}`} src={photo} alt="Yup, it's still me" />
       <p className={`${styles.aboutText}`}>
@@ -17,6 +17,7 @@ function AboutMe(props) {
         opportunities to learn new thing and started learning programming. Also I have to admit, that I'm a big fan of
         boardgames and maybe a little fan of dad jokes :D
       </p>
+      <div id="skills" className={`${styles.angle}`} />
     </div>
   );
 }

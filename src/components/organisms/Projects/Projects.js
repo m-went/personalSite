@@ -17,10 +17,11 @@ function Projects(props) {
     return <SingleProject name={p.name} url={p.url} photo={p.photo} description={p.description} key={p.url} />;
   });
   return (
-    <div id="projects" className={`${styles.projects}`}>
+    <div className={`${styles.projects}`}>
       <h2>So, You want to see, what I have already done?</h2>
       {projects}
       <p className={`${styles.nextProjects}`}>And more to come...</p>
+      <div id="contact" className={`${styles.angle}`} />
     </div>
   );
 }

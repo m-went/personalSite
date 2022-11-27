@@ -73,8 +73,8 @@ function Skills(props) {
     );
   });
   return (
-    <div id="skills" className={`${styles.skills}`}>
-      <h2>Ok Michał, show us what You got!</h2>
+    <div className={`${styles.skills}`}>
+      <h2>Ok Michał, show us what You've got!</h2>
       <div className={`${styles.skillsInfo}`}>
         <div className={`${styles.skillsText}`}>
           <h3>Right now, my skillset includes: </h3>
@@ -85,6 +85,7 @@ function Skills(props) {
         </div>
         <ul className={`${styles.skillsList}`}>{skills}</ul>
       </div>
+      <div id="projects" className={`${styles.angle}`} />
     </div>
   );
 }

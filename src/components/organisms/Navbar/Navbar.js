@@ -34,7 +34,7 @@ function Navbar(props) {
       {isBurgerOpen ? mobileNavbar : null}
       <nav className={`${styles.navbar}`}>
         <ul className={`${styles.navList}`}>
-          <a className={`${styles.navSection}`} href="#home">
+          <a className={`${styles.navSection}`} href="#root">
             <li>Home</li>
           </a>
           <a className={`${styles.navSection}`} href="#about-me">

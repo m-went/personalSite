@@ -32,7 +32,9 @@ function ContactForm(props) {
     <form onSubmit={sendEmail} className={styles.contactForm} noValidate>
       <label htmlFor="email">Your email:</label>
       <input type="email" name="email" id="email" value={mail.email} onChange={handleInputChange} required />
-      {validationMessages.emailError ? <h3>{`${validationMessages.emailError}`}</h3> : null}
+      {validationMessages.emailError ? (
+        <p className={`${styles.validationError}`}>{`${validationMessages.emailError}`}</p>
+      ) : null}
       <label htmlFor="name">Your name:</label>
       <input type="text" name="name" id="name" value={mail.name} onChange={handleInputChange} />
       <label htmlFor="message">Message:</label>
@@ -45,7 +47,9 @@ function ContactForm(props) {
         onChange={handleInputChange}
         required
       />
-      {validationMessages.messageError ? <h3>{`${validationMessages.messageError}`}</h3> : null}
+      {validationMessages.messageError ? (
+        <p className={`${styles.validationError}`}>{`${validationMessages.messageError}`}</p>
+      ) : null}
       <button className={`${styles.formButton}`} type="submit">
         Send me a message
       </button>

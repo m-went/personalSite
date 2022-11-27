@@ -1,19 +1,27 @@
 @use '../../../responsiveStyles.module.scss';
 
 .home {
+  position: relative;
   min-height: 100vh;
-  padding: 0 10px;
-  overflow-x: hidden;
+  padding: 0 20%;
   display: flex;
   flex-direction: column;
+  background-image: url('../../../assets/imgs/b1.jpg');
   justify-content: center;
   align-items: center;
+
   li {
     line-height: 1.8rem;
     font-size: 1.2em;
   }
 }
-
+.myInfo {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .photoContainer {
   border: 2px solid white;
   border-radius: 50%;
@@ -26,4 +34,13 @@
     object-fit: cover;
     height: 650px;
   }
+}
+
+.endPageGradient {
+  width: 100%;
+  height: 10vh;
+  position: absolute;
+  bottom: -2vh;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgb(136, 136, 136) 75%);
+  z-index: 2;
 }

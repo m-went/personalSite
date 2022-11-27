@@ -16,4 +16,15 @@
   margin-top: 20px;
   border: none;
   margin-left: auto;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.formButton:hover {
+  background-color: rgb(104, 255, 124);
+}
+
+.validationError {
+  margin-top: 5px;
+  color: rgb(214, 73, 73);
 }
