@@ -30,12 +30,12 @@ function ContactForm(props) {
 
   return (
     <form onSubmit={sendEmail} className={styles.contactForm} noValidate>
-      <label htmlFor="email">*Your email:</label>
+      <label htmlFor="email">Your email:</label>
       <input type="email" name="email" id="email" value={mail.email} onChange={handleInputChange} required />
       {validationMessages.emailError ? <h3>{`${validationMessages.emailError}`}</h3> : null}
       <label htmlFor="name">Your name:</label>
       <input type="text" name="name" id="name" value={mail.name} onChange={handleInputChange} />
-      <label htmlFor="message">*Message:</label>
+      <label htmlFor="message">Message:</label>
       <textarea
         name="message"
         id="message"
