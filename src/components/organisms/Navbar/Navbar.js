@@ -3,7 +3,7 @@ import HamburgerMenu from '../../atoms/HamburgerMenu/HamburgerMenu';
 import { useState } from 'react';
 
 function Navbar(props) {
-  const [isBurgerOpen, setIsBurgerOpen] = useState(true);
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   const toggleBurger = () => {
     setIsBurgerOpen((b) => !b);
   };

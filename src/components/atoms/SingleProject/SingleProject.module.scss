@@ -1,57 +1,37 @@
 @use '../../../responsiveStyles.module.scss';
 
 .singleProject {
-  height: 400px;
-  /*   margin: 100px 0; */
-  overflow: hidden;
-  /*   scale: 1.1; */
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
+  margin-top: 50px;
+}
+.projectInfo {
+  position: relative;
 }
 
-/* .projectTab {
+.projectTab {
   width: 100%;
-  filter: grayscale(0.8);
-  transition: all 0.6s;
-  position: relative;
-  height: 600px;
-  top: -100px;
+}
 
-  &:hover {
-    filter: grayscale(0);
-    transform: scale(1.1);
-  }
-} */
-
-/* .singleProject::after {
+.projectInfo::after {
   display: block;
   width: 80%;
   position: absolute;
-  top: 75%;
   background-color: white;
   height: 2px;
   content: '';
-} */
-.singleProject:hover::after {
+  top: 40%;
+}
+.projectInfo:hover::after {
   transform-origin: left;
   animation: 0.7s drawAnimation linear 1;
 }
 
-/* .projectName {
-  position: absolute;
-  left: 50px;
+.projectName {
   font-size: 1.2rem;
-  top: 60%;
 }
 
 .description {
-  position: absolute;
-  top: 75%;
-  left: 50px;
-} */
+  position: relative;
+}
 @keyframes drawAnimation {
   from {
     transform: scaleX(0);

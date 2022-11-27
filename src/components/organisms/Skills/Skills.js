@@ -77,7 +77,7 @@ function Skills(props) {
       <h2>Ok Michał, show us what You got!</h2>
       <div className={`${styles.skillsInfo}`}>
         <div className={`${styles.skillsText}`}>
-          <h2>Right now, my skillset includes: </h2>
+          <h3>Right now, my skillset includes: </h3>
           <p>
             Currently I'm working on improving my React skills and other basics in every shown technology. Also, I'm
             planning to learn typescript and MySQL database basics. What is gonna be next? We will see...

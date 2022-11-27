@@ -18,7 +18,7 @@ function Projects(props) {
   });
   return (
     <div id="projects" className={`${styles.projects}`}>
-      <h3>So, You want to see, what I have already done?</h3>
+      <h2>So, You want to see, what I have already done?</h2>
       {projects}
       <p className={`${styles.nextProjects}`}>And more to come...</p>
     </div>
