@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 function SkillInfo({ skillName, icon, bgColor }) {
   const [isHovering, setIsHovering] = useState(false);
-  const skillColors = isHovering ? { backgroundColor: `${bgColor}` } : { backgroundColor: '#203354' };
+  const skillColors = isHovering ? { backgroundColor: `${bgColor}` } : null;
   const hoverHandler = () => {
     setIsHovering(!isHovering);
   };

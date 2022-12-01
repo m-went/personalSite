@@ -1,4 +1,5 @@
 @use '../../../responsiveStyles.module.scss';
+@use '../../../themeVariables.module.scss';
 
 .home {
   position: relative;
@@ -9,6 +10,7 @@
   background-image: url('../../../assets/imgs/b1.jpg');
   justify-content: center;
   align-items: center;
+  color: white;
 
   li {
     line-height: 1.8rem;
@@ -23,7 +25,7 @@
   align-items: center;
 }
 .photoContainer {
-  border: 2px solid white;
+  border: 2px solid themeVariables.$main;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
@@ -41,6 +43,6 @@
   height: 10vh;
   position: absolute;
   bottom: -2vh;
-  background: linear-gradient(rgba(255, 255, 255, 0), rgb(136, 136, 136) 75%);
+  background: linear-gradient(rgba(255, 255, 255, 0), themeVariables.$second 75%);
   z-index: 2;
 }

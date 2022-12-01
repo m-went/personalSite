@@ -1,5 +1,7 @@
+@use '../../../themeVariables.module.scss';
+
 .arrow {
-  color: white;
+  color: themeVariables.$mainText;
 }
 
 .arrowContainer {
@@ -16,7 +18,7 @@
 .circle {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0);
-  box-shadow: inset 0px 0px 10px 10px rgb(255, 255, 255), 0px 0px 10px 10px rgb(255, 255, 255);
+  box-shadow: inset 0px 0px 10px 10px themeVariables.$main, 0px 0px 10px 10px themeVariables.$main;
   width: 20px;
   height: 20px;
   position: absolute;

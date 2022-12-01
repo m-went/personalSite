@@ -1,4 +1,5 @@
 @use '../../../responsiveStyles.module.scss';
+@use '../../../themeVariables.module.scss';
 
 .contact {
   min-height: 100vh;
@@ -8,5 +9,5 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgb(43, 43, 43);
+  background-color: themeVariables.$third;
 }

@@ -1,18 +1,20 @@
+@use '../../../themeVariables.module.scss';
+
 .cursor::after {
   content: '|';
-  color: #ccc;
+  color: themeVariables.$secondaryText;
   display: inline-block;
-  background-color: #ccc;
+  background-color: themeVariables.$secondaryText;
   width: 15px;
   animation: blink 1s infinite;
 }
 
 @keyframes blink {
   0% {
-    background-color: #ccc;
+    background-color: themeVariables.$secondaryText;
   }
   49% {
-    background-color: #ccc;
+    background-color: themeVariables.$secondaryText;
   }
   50% {
     background-color: transparent;
@@ -23,6 +25,6 @@
     visibility: hidden;
   }
   100% {
-    background-color: #ccc;
+    background-color: themeVariables.$secondaryText;
   }
 }
