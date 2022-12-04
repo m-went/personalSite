@@ -1,15 +1,38 @@
 import styles from './AboutMe.module.scss';
 import photo from '../../../assets/imgs/CV-zdjecie.jpg';
+import { useEffect, useState } from 'react';
 
 function AboutMe(props) {
+  const [scrollY, setScrollY] = useState(0);
+  const [isInfoShown, setInfoShown] = useState(false);
+
+  function logit() {
+    setScrollY(window.scrollY);
+    if (scrollY > 400) {
+      setInfoShown(true);
+    }
+  }
+
+  useEffect(() => {
+    console.log(isInfoShown);
+    function watchScroll() {
+      window.addEventListener('scroll', logit);
+    }
+    watchScroll();
+    return () => {
+      window.removeEventListener('scroll', logit);
+    };
+  });
+
   return (
-    <div className={`${styles.aboutMe}`}>
+    <div className={`${styles.aboutMe}`} id="abc">
       <h2 className={`${styles.aboutTitle}`}>A few words about me...</h2>
       <div className={`${styles.aboutMainInfo}`}>
-        <div className={`${styles.imgWrapper}`}>
+        <div className={`${isInfoShown ? styles.showFromLeft : ''} ${styles.imgWrapper} `}>
           <img className={`${styles.aboutPhoto}`} src={photo} alt="Yup, it's still me" />
+          <div className={`${styles.outsideColor2}`}></div>
         </div>
-        <div className={`${styles.textWrapper}`}>
+        <div className={`${isInfoShown ? styles.showFromRight : ''} ${styles.textWrapper} `}>
           <p className={`${styles.aboutText}`}>
             Hello! As You probably know, my name is Michał. I'm from Poland and actually living in Rumia, near Tricity.
             I hope, that now i'm a nice pretender to become junior front-end developer and You're reading this means,
