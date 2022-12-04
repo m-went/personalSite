@@ -5,6 +5,8 @@
   height: 400px;
   object-fit: contain;
   background-color: themeVariables.$second;
+  position: relative;
+  z-index: 1;
 }
 .aboutMe {
   min-height: 90vh;
@@ -33,10 +35,34 @@
 .aboutMainInfo {
   display: flex;
   flex-direction: row;
-  padding: 0 20%;
+  padding: 0 10%;
 }
 
 .aboutTitle {
   align-self: flex-start;
   padding-left: 20%;
+}
+
+.outsideColor {
+  position: absolute;
+  top: -20px;
+  left: 50px;
+  width: 100%;
+  transform: rotate(-10deg) scale(1.1);
+  height: 100%;
+  background-color: white;
+}
+
+.aboutText {
+  position: relative;
+  z-index: 1;
+}
+
+.textWrapper {
+  position: relative;
+  flex: 1.4;
+}
+
+.imgWrapper {
+  flex: 0.6;
 }

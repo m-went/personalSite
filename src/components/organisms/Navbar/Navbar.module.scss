@@ -12,6 +12,12 @@
   z-index: 3;
 }
 
+.navList {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
 .navSection {
   position: relative;
   width: 100px;
@@ -19,39 +25,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.5s;
-  &::after {
-    content: '';
-    position: absolute;
-    top: 75%;
-    background-color: themeVariables.$navUnderline;
-    width: 80%;
-    height: 2px;
-    border-radius: 50%;
-    transform: scale(0);
+  transition: all 0.2s;
+  li {
+    color: white;
+    position: relative;
+    z-index: 2;
   }
-}
-
-.navList {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0;
+  &::after {
+    transition: all 0.5s;
+    content: '';
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    clip-path: polygon(0 15%, 100% 30%, 100% 60%, 8% 67%);
+  }
 }
 
 .navSection:hover {
+  li {
+    color: black;
+  }
   &::after {
-    transform: scale(1);
-    transform-origin: 50%;
-    animation: growAnimation 0.2s linear;
-  }
-}
-
-@keyframes growAnimation {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
+    height: 100%;
+    opacity: 1;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    animation: animateHoverBg 2s infinite;
   }
 }
 
@@ -81,4 +84,35 @@
   justify-content: flex-end;
   align-items: center;
   height: 50px;
+}
+
+@keyframes growAnimation {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes animateHoverBg {
+  0% {
+    clip-path: polygon(0 9%, 100% 25%, 100% 64%, 0 75%);
+  }
+  20% {
+    clip-path: polygon(10% 17%, 100% 30%, 91% 78%, 6% 81%);
+  }
+  40% {
+    clip-path: polygon(19% 43%, 94% 9%, 100% 99%, 11% 63%);
+  }
+  60% {
+    clip-path: polygon(0 19%, 92% 23%, 96% 35%, 4% 92%);
+  }
+  80% {
+    clip-path: polygon(10% 27%, 89% 31%, 99% 84%, 14% 60%);
+  }
+
+  100% {
+    clip-path: polygon(0 9%, 100% 25%, 100% 64%, 0 75%);
+  }
 }
