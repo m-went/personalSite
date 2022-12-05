@@ -10,11 +10,27 @@ function Projects(props) {
       url: 'https://ventusb.pl',
       photo: ventus,
       description: 'My first full crud page using HTML, CSS, JS, Express, Mongo and Node',
+      transform: ' rotate(-10deg) scale(1)',
     },
-    { name: 'My personal page', url: '/', photo: myPage, description: 'As You can see, page to show my humble person' },
+    {
+      name: 'My personal page',
+      url: '/',
+      photo: myPage,
+      description: 'As You can see, page to show my humble person',
+      transform: 'rotate(10deg) scale(1)',
+    },
   ];
   const projects = allProjects.map((p) => {
-    return <SingleProject name={p.name} url={p.url} photo={p.photo} description={p.description} key={p.url} />;
+    return (
+      <SingleProject
+        name={p.name}
+        url={p.url}
+        photo={p.photo}
+        description={p.description}
+        key={p.url}
+        transform={p.transform}
+      />
+    );
   });
   return (
     <div className={`${styles.projects}`}>

@@ -23,9 +23,32 @@
 
 .formButton:hover {
   background-color: themeVariables.$success;
+  animation: animateHoverBg 2s infinite;
 }
 
 .validationError {
   margin-top: 5px;
   color: themeVariables.$error;
+}
+
+@keyframes animateHoverBg {
+  0% {
+    clip-path: polygon(0 9%, 100% 25%, 100% 64%, 0 75%);
+  }
+  20% {
+    clip-path: polygon(10% 17%, 100% 30%, 91% 78%, 6% 81%);
+  }
+  40% {
+    clip-path: polygon(19% 43%, 94% 9%, 100% 99%, 11% 63%);
+  }
+  60% {
+    clip-path: polygon(0 19%, 92% 23%, 96% 35%, 4% 92%);
+  }
+  80% {
+    clip-path: polygon(10% 27%, 89% 31%, 99% 84%, 14% 60%);
+  }
+
+  100% {
+    clip-path: polygon(0 9%, 100% 25%, 100% 64%, 0 75%);
+  }
 }

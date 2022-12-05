@@ -1,6 +1,9 @@
 import styles from './SingleProject.module.scss';
 
-function SingleProject({ name, url, photo, description }) {
+function SingleProject({ name, url, photo, description, transform }) {
+  const outsideShape = {
+    transform: `${transform}`,
+  };
   return (
     <a href={url} target="_blank" rel="noopener noreferrer">
       <div className={`${styles.singleProject}`}>
@@ -11,6 +14,7 @@ function SingleProject({ name, url, photo, description }) {
           <h4 className={`${styles.projectName}`}>{name}</h4>
           <p className={`${styles.description}`}>{description}</p>
         </div>
+        <div className={`${styles.outsideColor}`} style={outsideShape}></div>
       </div>
     </a>
   );
