@@ -2,16 +2,15 @@
 @use '../../../themeVariables.module.scss';
 
 .skillInfo {
-  border: 4px solid themeVariables.$skillBorder;
   background-color: themeVariables.$skillBg;
-  border-radius: 15px;
+  border-radius: 27% 39% 44% 25% / 27% 27% 31% 48%;
   color: themeVariables.$skillIcon;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5px;
-  overflow: hidden;
+  margin: 15px;
   transition: background-color 0.5s ease-out;
+  position: relative;
 }
 .skillIcon {
   margin-top: 5px;
@@ -20,11 +19,70 @@
   font-weight: 600;
   font-size: 1rem;
   transform: translateY(50px);
-  transition: all 0.3s;
+  opacity: 0;
+  transition: all 0.2s;
 }
 
 .skillInfo:hover {
   .skillName {
+    opacity: 1;
     transform: translateY(0px);
   }
+}
+
+.skillInfo span:nth-child(1) {
+  position: absolute;
+  border: 2px solid black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 27% 39% 44% 25% / 27% 27% 31% 48%;
+  animation: rotate 8s infinite linear;
+}
+
+.skillInfo span:nth-child(2) {
+  position: absolute;
+  border: 2px solid black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 14% 21% 26% 47% / 35% 21% 14% 41%;
+  animation: rotate 12s infinite linear;
+}
+
+.skillInfo span:nth-child(3) {
+  position: absolute;
+  border: 2px solid black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 42% 22% 33% 18% / 30% 20% 40% 50%;
+  animation: rotate 6s infinite linear;
+}
+
+.skillInfo span:nth-child(4) {
+  position: absolute;
+  border: 2px solid black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 44% 19% 37% 24% / 26% 29% 41% 50%;
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.nameHide {
+  overflow: hidden;
 }

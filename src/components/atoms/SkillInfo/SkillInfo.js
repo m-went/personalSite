@@ -15,15 +15,21 @@ function SkillInfo({ skillName, icon, bgColor }) {
   });
 
   return (
-    <div
-      className={`${styles.skillInfo}`}
-      style={skillColors}
-      onMouseEnter={hoverHandler}
-      onMouseLeave={hoverHandler}
-      data-testid="skillInfo"
-    >
-      <img src={icon} alt="icon" className={`${styles.skillIcon}`} />
-      <span className={`${styles.skillName}`}>{skillName} </span>
+    <div className={`${styles.nameHide}`}>
+      <div
+        className={`${styles.skillInfo}`}
+        style={skillColors}
+        onMouseEnter={hoverHandler}
+        onMouseLeave={hoverHandler}
+        data-testid="skillInfo"
+      >
+        <span />
+        <span />
+        <span />
+        <span />
+        <img src={icon} alt="icon" className={`${styles.skillIcon}`} />
+        <span className={`${styles.skillName}`}>{skillName} </span>
+      </div>
     </div>
   );
 }
