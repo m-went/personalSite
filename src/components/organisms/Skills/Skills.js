@@ -75,15 +75,18 @@ function Skills(props) {
   return (
     <div className={`${styles.skills}`}>
       <h2>Ok Michał, show us what You've got!</h2>
-      <div className={`${styles.skillsInfo}`}>
-        <div className={`${styles.skillsText}`}>
-          <h3>Right now, my skillset includes: </h3>
-          <p>
-            Currently I'm working on improving my React skills and other basics in every shown technology. Also, I'm
-            planning to learn typescript and MySQL database basics. What is gonna be next? We will see...
-          </p>
+      <div className={`${styles.test}`}>
+        <div className={`${styles.skillsInfo}`}>
+          <div className={`${styles.skillsText}`}>
+            <h3>Right now, my skillset includes: </h3>
+            <p>
+              Currently I'm working on improving my React skills and other basics in every shown technology. Also, I'm
+              planning to learn typescript and MySQL database basics. What is gonna be next? We will see...
+            </p>
+          </div>
+          <ul className={`${styles.skillsList}`}>{skills}</ul>
         </div>
-        <ul className={`${styles.skillsList}`}>{skills}</ul>
+        <div className={`${styles.outsideColor}`}></div>
       </div>
       <div id="projects" className={`${styles.angle}`} />
     </div>
