@@ -4,6 +4,7 @@
 .contactForm {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   label {
     margin: 10px 0;
@@ -13,16 +14,16 @@
 .formButton {
   width: 40%;
   padding: 20px;
-  border-radius: 10px;
   margin-top: 20px;
   border: none;
   margin-left: auto;
   cursor: pointer;
   transition: all 1s;
+  clip-path: polygon(19% 0, 89% 0, 81% 100%, 11% 100%);
 }
 
 .formButton:hover {
-  background-color: themeVariables.$success;
+  background-color: white;
   animation: animateHoverBg 2s infinite;
 }
 
@@ -31,24 +32,28 @@
   color: themeVariables.$error;
 }
 
+textarea {
+  resize: none;
+}
+
 @keyframes animateHoverBg {
   0% {
-    clip-path: polygon(0 9%, 100% 25%, 100% 64%, 0 75%);
+    clip-path: polygon(19% 0, 89% 0, 81% 100%, 11% 100%);
   }
   20% {
-    clip-path: polygon(10% 17%, 100% 30%, 91% 78%, 6% 81%);
+    clip-path: polygon(19% 0, 100% 0, 81% 100%, 0 100%);
   }
   40% {
-    clip-path: polygon(19% 43%, 94% 9%, 100% 99%, 11% 63%);
+    clip-path: polygon(22% 25%, 94% 0, 75% 85%, 7% 90%);
   }
   60% {
-    clip-path: polygon(0 19%, 92% 23%, 96% 35%, 4% 92%);
+    clip-path: polygon(0 0, 84% 0, 100% 100%, 19% 100%);
   }
   80% {
-    clip-path: polygon(10% 27%, 89% 31%, 99% 84%, 14% 60%);
+    clip-path: polygon(8% 14%, 100% 0, 86% 88%, 0 100%);
   }
 
   100% {
-    clip-path: polygon(0 9%, 100% 25%, 100% 64%, 0 75%);
+    clip-path: polygon(19% 0, 89% 0, 81% 100%, 11% 100%);
   }
 }

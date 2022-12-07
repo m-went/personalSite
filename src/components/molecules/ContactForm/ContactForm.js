@@ -2,13 +2,21 @@ import styles from './ContactForm.module.scss';
 import axios from 'axios';
 import { useState } from 'react';
 import Error from '../../atoms/Error/Error';
-
 import useForm from '../../../hooks/useForm';
+import SuccessInfo from '../../atoms/SuccessInfo/SuccessInfo';
 
 function ContactForm(props) {
   const emptyForm = { email: '', name: '', message: '' };
   const { mail, validationMessages, handleInputChange, resetInputs, validateForm } = useForm(emptyForm);
   const [isSendError, setIsSendError] = useState(false);
+  const [isMessageSent, setIsMessageSent] = useState(false);
+
+  const showSuccessMessage = () => {
+    setIsMessageSent(true);
+    setTimeout(() => {
+      setIsMessageSent(false);
+    }, 10000);
+  };
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -21,6 +29,7 @@ function ContactForm(props) {
           email: mail.email,
           message: mail.message,
         });
+        showSuccessMessage();
       } catch (e) {
         setIsSendError(true);
       }
@@ -54,6 +63,7 @@ function ContactForm(props) {
         Send me a message
       </button>
       {isSendError ? <Error /> : null}
+      {isMessageSent ? <SuccessInfo /> : null}
     </form>
   );
 }
