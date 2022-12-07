@@ -25,7 +25,7 @@ function AboutMe(props) {
   });
 
   return (
-    <div className={`${styles.aboutMe}`} id="abc">
+    <section className={`${styles.aboutMe}`} id="abc">
       <h2 className={`${styles.aboutTitle}`}>A few words about me...</h2>
       <div className={`${styles.aboutMainInfo}`}>
         <div className={`${isInfoShown ? styles.showFromLeft : ''} ${styles.imgWrapper} `}>
@@ -48,7 +48,7 @@ function AboutMe(props) {
         </div>
       </div>
       <div id="skills" className={`${styles.angle}`} />
-    </div>
+    </section>
   );
 }
 

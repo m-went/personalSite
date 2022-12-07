@@ -5,7 +5,7 @@ import Arrow from '../../atoms/Arrow/Arrow';
 
 function Home(props) {
   return (
-    <div className={`${styles.home}`}>
+    <section className={`${styles.home}`}>
       <div className={`${styles.photoContainer}`}>{<img src={photo} alt="It's me, Mar...Michał!" />}</div>
       <AnimatedText />
       <ul className={`${styles.myInfo}`}>
@@ -15,7 +15,7 @@ function Home(props) {
       </ul>
       <Arrow />
       <div id="about-me" className={`${styles.endPageGradient}`} />
-    </div>
+    </section>
   );
 }
 
