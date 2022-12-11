@@ -58,34 +58,6 @@
   }
 }
 
-.mobileNavbar {
-  position: absolute;
-  right: 0px;
-  width: 180px;
-  top: 70px;
-  background-color: themeVariables.$navBg;
-}
-
-.mobileNavList {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  width: 100%;
-  margin: 0;
-
-  a:not(:last-child) {
-    border-bottom: 1px solid white;
-  }
-}
-
-.mobileNavSection {
-  display: flex;
-  padding-right: 20px;
-  justify-content: flex-end;
-  align-items: center;
-  height: 50px;
-}
-
 @keyframes growAnimation {
   from {
     transform: scaleX(0);

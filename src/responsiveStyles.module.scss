@@ -1,27 +1,127 @@
+@media (min-width: 1601px) {
+  .aboutMainInfo {
+    padding: 0 15%;
+  }
+  .aboutOutsideColor2 {
+    width: 100%;
+    left: -50px;
+    transform: rotate(10deg) scale(1.2);
+    height: 100%;
+  }
+  .singleProject {
+    margin: 50px 20% 0 20%;
+  }
+}
+@media (max-width: 1600px) {
+  .aboutOutsideColor2 {
+    width: 120%;
+    top: 10px;
+    left: -10px;
+    transform: rotate(10deg) scale(1.4);
+    height: 90%;
+  }
+  .aboutMainInfo {
+    padding: 0 5%;
+  }
+  .singleProject {
+    margin: 10% 2% 0 2%;
+  }
+}
+
 @media (min-width: 1201px) {
   .projectName {
     margin-top: 1.5em;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .projectTab {
     filter: grayscale(0.8);
     transition: all 0.6s;
+    max-width: 900px;
+    object-fit: contain;
 
     &:hover {
       filter: grayscale(0);
       transform: scale(1.1);
     }
   }
+  .projectInfo {
+    margin-top: 2.5rem;
+  }
   .projectName {
     margin-top: 1.33em;
+  }
+  .myInfo {
+    align-items: center;
   }
 }
 
 @media (max-width: 1024px) {
   .projectName {
     margin-top: 5px;
+  }
+  .aboutOutsideColor2 {
+    width: 120%;
+    top: 10px;
+    left: -10px;
+    transform: rotate(10deg) scale(1.4);
+    height: 90%;
+  }
+  .aboutMainInfo {
+    padding: 0;
+  }
+  .myInfo {
+    align-items: flex-start;
+  }
+  .projectTab {
+    width: 100%;
+  }
+  .projectInfo {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 801px) {
+  .aboutMainInfo {
+    flex-direction: row;
+  }
+  .aboutOutsideColor2 {
+    top: 25px;
+  }
+  .showFromRight {
+    padding-top: 0px;
+  }
+  .skillsList {
+    width: 50vw;
+  }
+  .skillsOutsideColor {
+    top: -20px;
+    transform: rotate(-10deg) scale(1.1);
+  }
+}
+
+@media (max-width: 800px) {
+  .aboutOutsideColor2 {
+    width: 150%;
+    top: 10px;
+    left: -50px;
+    transform: rotate(10deg) scale(1.2);
+    height: 100%;
+  }
+  .aboutMainInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .showFromRight {
+    padding-top: 40px;
+  }
+  .skillsOutsideColor {
+    top: -20px;
+    transform: rotate(-10deg);
+  }
+  .skillsList {
+    width: 80vw;
   }
 }
 
@@ -45,6 +145,7 @@
     line-height: 160%;
     font-size: 1.2em;
     margin-left: 40px;
+    margin-bottom: 80px;
     color: black;
     padding: 20px;
     display: flex;
@@ -76,13 +177,10 @@
       font-size: 2rem;
     }
   }
+  .endPageGradient {
+    bottom: -2vh;
+  }
 
-  .skillsList {
-    width: 50vw;
-  }
-  .skillsInfo {
-    flex-direction: row;
-  }
   .contactForm {
     width: 70vw;
     margin-top: 50px;
@@ -94,13 +192,12 @@
 
   .home {
     padding: 0 20%;
+    top: 0;
   }
   .myInfo {
     align-items: center;
   }
   .aboutMainInfo {
-    flex-direction: row;
-    padding: 0 15%;
     padding-top: 80px;
   }
   .showFromLeft {
@@ -116,17 +213,10 @@
     left: 50px;
   }
   .showFromRight {
-    padding-top: 0px;
     padding-bottom: 0px;
   }
   .skillsOutsideColor {
     top: -20px;
-  }
-  .singleProject {
-    margin: 50px 20% 0 20%;
-  }
-  .projectInfo {
-    margin-top: 2rem;
   }
   .singleProjectOutsideColor {
     height: 100%;
@@ -175,9 +265,9 @@
   .aboutText {
     margin: 10px;
   }
-
   .home {
     padding: 0 5%;
+    top: -65px;
   }
   .myInfo {
     align-items: flex-start;
@@ -207,6 +297,7 @@
   }
   .skillsOutsideColor {
     top: 40px;
+    transform: rotate(-10deg) scale(1.1);
   }
   .singleProject {
     margin: 10% 2% 0 2%;
@@ -216,5 +307,8 @@
   }
   .singleProjectOutsideColor {
     height: 120%;
+  }
+  .endPageGradient {
+    bottom: -8vh;
   }
 }
