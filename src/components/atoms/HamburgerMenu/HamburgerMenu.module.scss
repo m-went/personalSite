@@ -2,12 +2,12 @@
 @use '../../../themeVariables.module.scss';
 
 .hamburgerMenu {
-  position: absolute;
-  width: 48px;
-  height: 39px;
-  margin: 0 2vw;
+  position: sticky;
+  width: 68px;
+  height: 59px;
   top: 20px;
-  right: 20px;
+  left: 80vw;
+  z-index: 5;
 }
 
 .hamburgerMenu input {
@@ -21,10 +21,13 @@
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 20px;
   display: flex;
   flex-direction: column;
+  padding: 10px;
   justify-content: space-between;
+  background-color: black;
+  border: 2px solid black;
 }
 
 .hamburgerMenu .line {
@@ -48,4 +51,33 @@
 
 .isOpen .bot {
   opacity: 0;
+}
+
+.mobileNavbar {
+  position: absolute;
+  right: -25px;
+  width: 180px;
+  top: 50px;
+  background-color: themeVariables.$navBg;
+  z-index: 2;
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+
+  a:not(:last-child) {
+    border-bottom: 1px solid white;
+  }
+}
+
+.mobileNavSection {
+  display: flex;
+  padding-right: 20px;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
 }

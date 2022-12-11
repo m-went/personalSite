@@ -1,7 +1,7 @@
 import styles from './Projects.module.scss';
 import SingleProject from '../../atoms/SingleProject/SingleProject';
-import ventus from '../../../assets/imgs/ventus.png';
-import myPage from '../../../assets/imgs/myPage.png';
+import ventus from '../../../assets/imgs/ventusV2.png';
+import myPage from '../../../assets/imgs/myPageV4.png';
 
 function Projects(props) {
   const allProjects = [

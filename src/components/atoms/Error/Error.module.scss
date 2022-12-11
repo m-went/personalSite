@@ -2,16 +2,31 @@
 @use '../../../themeVariables.module.scss';
 
 .error {
-  background-color: themeVariables.$main;
+  background-color: white;
   padding: 25px 25px 15px;
   color: themeVariables.$error;
-  border: 3px solid themeVariables.$error;
-  border-radius: 15px;
+  margin-top: 2rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 40vw;
+  flex-direction: column;
+  clip-path: polygon(19% 0, 89% 0, 81% 100%, 11% 100%);
+  animation: slideIn 2s ease-in-out 1 forwards, slideIn 2s 6s ease-in-out 1 reverse forwards;
+  transform: translateY(100vh);
+  position: absolute;
+  left: 20%;
   .errorHeader {
     font-size: 20px;
     color: themeVariables.$error;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(50vh);
   }
 }
