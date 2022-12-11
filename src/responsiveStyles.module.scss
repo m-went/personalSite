@@ -91,6 +91,46 @@
     width: 500px;
     height: 500px;
   }
+
+  .home {
+    padding: 0 20%;
+  }
+  .myInfo {
+    align-items: center;
+  }
+  .aboutMainInfo {
+    flex-direction: row;
+    padding: 0 15%;
+    padding-top: 80px;
+  }
+  .showFromLeft {
+    margin-top: 0px;
+  }
+  .imgWrapper {
+    left: -800px;
+  }
+  .aboutOutsideColor2 {
+    top: 10px;
+  }
+  .aboutOutsideColor {
+    left: 50px;
+  }
+  .showFromRight {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .skillsOutsideColor {
+    top: -20px;
+  }
+  .singleProject {
+    margin: 50px 20% 0 20%;
+  }
+  .projectInfo {
+    margin-top: 2rem;
+  }
+  .singleProjectOutsideColor {
+    height: 100%;
+  }
 }
 @media (max-width: 480px) {
   .navbar {
@@ -134,5 +174,47 @@
   }
   .aboutText {
     margin: 10px;
+  }
+
+  .home {
+    padding: 0 5%;
+  }
+  .myInfo {
+    align-items: flex-start;
+  }
+  .aboutMainInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+  }
+  .showFromLeft {
+    margin-top: 80px;
+  }
+
+  .imgWrapper {
+    left: -730px;
+  }
+  .aboutOutsideColor2 {
+    top: -10px;
+  }
+  .aboutOutsideColor {
+    left: 0px;
+  }
+
+  .showFromRight {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
+  .skillsOutsideColor {
+    top: 40px;
+  }
+  .singleProject {
+    margin: 10% 2% 0 2%;
+  }
+  .projectInfo {
+    margin-top: 0;
+  }
+  .singleProjectOutsideColor {
+    height: 120%;
   }
 }

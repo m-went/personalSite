@@ -14,7 +14,7 @@ function SingleProject({ name, url, photo, description, transform }) {
           <h4 className={`${styles.projectName}`}>{name}</h4>
           <p className={`${styles.description}`}>{description}</p>
         </div>
-        <div className={`${styles.outsideColor}`} style={outsideShape}></div>
+        <div className={`${styles.singleProjectOutsideColor}`} style={outsideShape}></div>
       </div>
     </a>
   );

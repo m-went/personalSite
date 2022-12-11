@@ -9,8 +9,8 @@ function Home(props) {
       <div className={`${styles.photoContainer}`}>{<img src={photo} alt="It's me, Mar...Michał!" />}</div>
       <AnimatedText />
       <ul className={`${styles.myInfo}`}>
-        <li>Aspiring junior front end developer</li>
-        <li>Hardworking and passionate about learning new things</li>
+        <li>Aspiring junior front end developer...</li>
+        <li>Hardworking and passionate about learning new things...</li>
         <li>...and looking for job!</li>
       </ul>
       <Arrow />

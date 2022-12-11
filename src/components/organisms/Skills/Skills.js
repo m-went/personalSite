@@ -86,7 +86,7 @@ function Skills(props) {
           </div>
           <ul className={`${styles.skillsList}`}>{skills}</ul>
         </div>
-        <div className={`${styles.outsideColor}`}></div>
+        <div className={`${styles.skillsOutsideColor}`}></div>
       </div>
       <div id="projects" className={`${styles.angle}`} />
     </section>

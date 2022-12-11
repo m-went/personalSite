@@ -30,7 +30,7 @@ function AboutMe(props) {
       <div className={`${styles.aboutMainInfo}`}>
         <div className={`${isInfoShown ? styles.showFromLeft : ''} ${styles.imgWrapper} `}>
           <img className={`${styles.aboutPhoto}`} src={photo} alt="Yup, it's still me" />
-          <div className={`${styles.outsideColor2}`}></div>
+          <div className={`${styles.aboutOutsideColor2}`}></div>
         </div>
         <div className={`${isInfoShown ? styles.showFromRight : ''} ${styles.textWrapper} `}>
           <p className={`${styles.aboutText}`}>
@@ -44,7 +44,7 @@ function AboutMe(props) {
             I want more opportunities to learn new thing and started learning programming. Also I have to admit, that
             I'm a big fan of boardgames and maybe a little fan of dad jokes :D
           </p>
-          <div className={`${styles.outsideColor}`}></div>
+          <div className={`${styles.aboutOutsideColor}`}></div>
         </div>
       </div>
       <div id="skills" className={`${styles.angle}`} />
