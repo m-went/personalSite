@@ -20,8 +20,9 @@
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios>)/\"",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build --remote page"
+    "deploy": "gh-pages -b site -d build --remote page"
   },
+  "homepage": "https://m-went.github.io",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -42,6 +43,5 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
-  },
-  "homepage": "https://m-went.github.io"
+  }
 }

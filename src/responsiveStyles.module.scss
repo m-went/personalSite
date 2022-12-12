@@ -14,7 +14,7 @@
 }
 @media (max-width: 1600px) {
   .aboutOutsideColor2 {
-    width: 120%;
+    width: 90%;
     top: 10px;
     left: -10px;
     transform: rotate(10deg) scale(1.4);
@@ -27,7 +27,16 @@
     margin: 10% 2% 0 2%;
   }
 }
-
+@media (max-width: 1400px) {
+  .aboutOutsideColor2 {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .aboutOutsideColor2 {
+    width: 110%;
+  }
+}
 @media (min-width: 1201px) {
   .projectName {
     margin-top: 1.5em;
@@ -58,15 +67,11 @@
 }
 
 @media (max-width: 1024px) {
-  .projectName {
-    margin-top: 5px;
-  }
   .aboutOutsideColor2 {
     width: 120%;
-    top: 10px;
-    left: -10px;
-    transform: rotate(10deg) scale(1.4);
-    height: 90%;
+  }
+  .projectName {
+    margin-top: 5px;
   }
   .aboutMainInfo {
     padding: 0;
