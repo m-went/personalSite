@@ -5,6 +5,7 @@ import Skills from './components/organisms/Skills/Skills';
 import Projects from './components/organisms/Projects/Projects';
 import Contact from './components/organisms/Contact/Contact';
 import Footer from './components/atoms/Footer/Footer';
+import ComicDialog from './components/organisms/ComicDialog/ComicDialog';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <ComicDialog />
     </div>
   );
 }
