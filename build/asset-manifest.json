@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.22bbfd44.css",
+    "main.js": "/static/js/main.ab4b740a.js",
+    "static/media/bg2.jpg": "/static/media/bg2.cc016e1f0c812a2d71af.jpg",
+    "static/media/myPageV4.png": "/static/media/myPageV4.56e0bde7c5972f9c8fd1.png",
+    "static/media/Red.jpg": "/static/media/Red.7d00c3735ec210976bb1.jpg",
+    "static/media/ventusV2.png": "/static/media/ventusV2.ec8a8203bb7d776f4c9c.png",
+    "static/media/CV-zdjecie.jpg": "/static/media/CV-zdjecie.66e5dbef2e989c2a2511.jpg",
+    "static/media/express-icon.svg": "/static/media/express-icon.62b6be91bb237350903a80f102f7e904.svg",
+    "static/media/react-icon.svg": "/static/media/react-icon.311aed114e16d40fef126a5efd7cfa17.svg",
+    "static/media/jest-icon.svg": "/static/media/jest-icon.d35a2fea591d481476d4bb41d449ba87.svg",
+    "static/media/mongodb-icon.svg": "/static/media/mongodb-icon.14d57809e0e365a0333e5ba6cddd9b49.svg",
+    "static/media/git-icon.svg": "/static/media/git-icon.4eec14ea72f69045684e6fe212fff841.svg",
+    "static/media/teamwork-icon.svg": "/static/media/teamwork-icon.9a10427195b8689656fc078fbd9dc121.svg",
+    "static/media/js-icon.svg": "/static/media/js-icon.41652ee89fb377eb3c7120c9a65e1307.svg",
+    "index.html": "/index.html",
+    "static/media/css-icon.svg": "/static/media/css-icon.0708c6bf84f8c69a4db904b3e50cef1a.svg",
+    "static/media/html-icon.svg": "/static/media/html-icon.b8d8e1c434b636f85526f80491ed67dd.svg",
+    "static/media/english-icon.svg": "/static/media/english-icon.37cd44b8dcd54d07d91498336c0b276f.svg",
+    "static/media/arrow-down.svg": "/static/media/arrow-down.abad206e0056fcf90990c6674924fc3a.svg",
+    "main.22bbfd44.css.map": "/static/css/main.22bbfd44.css.map",
+    "main.ab4b740a.js.map": "/static/js/main.ab4b740a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22bbfd44.css",
+    "static/js/main.ab4b740a.js"
+  ]
+}
