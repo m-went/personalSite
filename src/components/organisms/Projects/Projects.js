@@ -33,11 +33,11 @@ function Projects(props) {
     );
   });
   return (
-    <section className={`${styles.projects}`}>
+    <section id="projects" className={`${styles.projects}`}>
       <h2>So, You want to see, what I have already done?</h2>
       {projects}
       <p className={`${styles.nextProjects}`}>And more to come...</p>
-      <div id="contact" className={`${styles.angle}`} />
+      <div className={`${styles.angle}`} />
     </section>
   );
 }

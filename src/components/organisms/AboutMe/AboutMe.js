@@ -47,7 +47,7 @@ function AboutMe(props) {
           <div className={`${styles.aboutOutsideColor}`}></div>
         </div>
       </div>
-      <div id="skills" className={`${styles.angle}`} />
+      <div className={`${styles.angle}`} />
     </section>
   );
 }

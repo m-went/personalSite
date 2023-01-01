@@ -168,6 +168,9 @@
     width: 80px;
     height: 80px;
   }
+  .skillName {
+    font-size: 1rem;
+  }
   .skillInfo {
     width: 120px;
     height: 120px;
@@ -181,9 +184,6 @@
     h3 {
       font-size: 2rem;
     }
-  }
-  .endPageGradient {
-    bottom: -2vh;
   }
 
   .contactForm {
@@ -216,6 +216,8 @@
   }
   .aboutOutsideColor {
     left: 50px;
+    top: -20px;
+    transform: rotate(-10deg) scale(1.1);
   }
   .showFromRight {
     padding-bottom: 0px;
@@ -238,12 +240,15 @@
     width: 80vw;
   }
   .skillIcon {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+  }
+  .skillName {
+    font-size: 0.7rem;
   }
   .skillInfo {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
   }
   .skillsText {
     width: 100%;
@@ -272,7 +277,7 @@
   }
   .home {
     padding: 0 5%;
-    top: -65px;
+    padding-top: 5%;
   }
   .myInfo {
     align-items: flex-start;
@@ -287,13 +292,15 @@
   }
 
   .imgWrapper {
-    left: -730px;
+    left: -785px;
   }
   .aboutOutsideColor2 {
     top: -10px;
   }
   .aboutOutsideColor {
     left: 0px;
+    top: 82px;
+    transform: rotate(-10deg) scale(1.22);
   }
 
   .showFromRight {
@@ -312,8 +319,5 @@
   }
   .singleProjectOutsideColor {
     height: 120%;
-  }
-  .endPageGradient {
-    bottom: -8vh;
   }
 }
