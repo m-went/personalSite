@@ -2,7 +2,7 @@
 @use '../../../themeVariables.module.scss';
 
 .hamburgerMenu {
-  position: sticky;
+  position: fixed;
   width: 68px;
   height: 59px;
   top: 0px;
@@ -20,8 +20,8 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
-  left: 20px;
+  top: 10px;
+  left: 0px;
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -57,7 +57,7 @@
   position: absolute;
   right: -25px;
   width: 180px;
-  top: 50px;
+  top: 65px;
   background-color: themeVariables.$navBg;
   z-index: 2;
 }
@@ -76,7 +76,7 @@
 
 .mobileNavSection {
   display: flex;
-  padding-right: 20px;
+  padding-right: 30px;
   justify-content: flex-end;
   align-items: center;
   height: 50px;

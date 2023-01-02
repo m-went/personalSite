@@ -3,11 +3,12 @@
 
 .contact {
   min-height: 100vh;
-  padding: 0 20%;
+  padding: 2% 20%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-color: themeVariables.$third;
+  margin-top: 100px;
 }

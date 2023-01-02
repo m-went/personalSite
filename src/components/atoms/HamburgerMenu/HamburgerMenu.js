@@ -4,7 +4,7 @@ function HamburgerMenu({ isOpen, toggleBurger }) {
   const mobileNavbar = (
     <nav className={`${styles.mobileNavbar}`}>
       <ul className={`${styles.mobileNavList}`}>
-        <a className={`${styles.mobileNavSection}`} href="#home">
+        <a className={`${styles.mobileNavSection}`} href="#root">
           <li>Home</li>
         </a>
         <a className={`${styles.mobileNavSection}`} href="#about-me">

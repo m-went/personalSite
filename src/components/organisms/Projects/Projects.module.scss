@@ -15,8 +15,10 @@
   min-height: 100vh;
   overflow: hidden;
   background-color: themeVariables.$second;
+  padding-top: 50px;
   h2 {
     padding: 0 20%;
+    padding-bottom: 40px;
     position: relative;
     z-index: 2;
   }
@@ -26,7 +28,7 @@
   width: 100%;
   background-color: themeVariables.$second;
   height: 100px;
-  position: relative;
+  position: absolute;
 }
 
 .angle::after {

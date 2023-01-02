@@ -4,7 +4,7 @@ import ContactForm from '../../molecules/ContactForm/ContactForm';
 function Contact(props) {
   return (
     <section id="contact" className={`${styles.contact}`}>
-      <h1>Contact me</h1>
+      <h2>Contact me</h2>
       <ContactForm />
     </section>
   );

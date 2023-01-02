@@ -73,7 +73,7 @@ function Skills(props) {
     );
   });
   return (
-    <section className={`${styles.skills}`}>
+    <section id="skills" className={`${styles.skills}`}>
       <h2>Ok Michał, show us what You've got!</h2>
       <div className={`${styles.wrapper}`}>
         <div className={`${styles.skillsInfo}`}>
@@ -88,7 +88,7 @@ function Skills(props) {
         </div>
         <div className={`${styles.skillsOutsideColor}`}></div>
       </div>
-      <div id="projects" className={`${styles.angle}`} />
+      <div className={`${styles.angle}`} />
     </section>
   );
 }
