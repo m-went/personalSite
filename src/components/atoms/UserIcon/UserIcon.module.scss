@@ -1,10 +1,12 @@
 .Icon {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   border: 2px solid black;
   overflow: hidden;
   position: relative;
+  left: 65px;
+  top: 20px;
 }
 
 .Icon::before {
@@ -12,7 +14,7 @@
   height: 40px;
   position: absolute;
   top: 10px;
-  left: 28px;
+  left: 25px;
   border-radius: 50%;
   background-color: black;
   content: '';
@@ -23,8 +25,13 @@
   height: 85px;
   position: absolute;
   top: 46px;
-  left: 7px;
+  left: 4px;
   border-radius: 50%;
   background-color: black;
   content: '';
+}
+
+.guestIcon {
+  left: 0;
+  top: 62px;
 }
