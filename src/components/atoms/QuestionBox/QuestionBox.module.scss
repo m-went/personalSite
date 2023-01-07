@@ -1,0 +1,81 @@
+.question {
+  clip-path: polygon(80% 10%, 80% 25%, 100% 50%, 80% 38%, 77% 48%, 2% 44%, 0 7%);
+  background-color: black;
+  height: 200px;
+  width: 285px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question::before {
+  clip-path: polygon(78% 12%, 78% 26%, 100% 50%, 78% 34%, 76% 46%, 5% 42%, 1% 8%);
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
+  z-index: 3;
+}
+
+.questionBot {
+  position: absolute;
+  transform: rotateX(180deg);
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+}
+
+.questionText {
+  color: black;
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  font-weight: 600;
+  padding-top: 25px;
+  padding-left: 17px;
+  padding-right: 65px;
+  padding-bottom: 115px;
+  overflow-wrap: break-word;
+}
+
+.questionTextBot {
+  padding-top: 115px;
+  padding-bottom: 25px;
+  transform: rotateX(180deg);
+}
+
+.oldQuestion {
+  color: gray;
+}
+
+.question:hover {
+  cursor: pointer;
+  &::before {
+    animation: animateHover 2s infinite;
+  }
+}
+
+@keyframes animateHover {
+  0% {
+    clip-path: polygon(78% 12%, 78% 26%, 100% 50%, 78% 34%, 76% 46%, 5% 42%, 1% 8%);
+  }
+  25% {
+    clip-path: polygon(77% 12%, 78% 26%, 100% 50%, 77% 34%, 75% 46%, 4% 42%, 2% 8%);
+  }
+  50% {
+    clip-path: polygon(78% 12%, 78% 26%, 100% 50%, 78% 34%, 76% 46%, 5% 42%, 1% 8%);
+  }
+  75% {
+    clip-path: polygon(77% 13%, 78% 26%, 100% 50%, 77% 34%, 75% 45%, 4% 41%, 2% 10%);
+  }
+  100% {
+    clip-path: polygon(78% 12%, 78% 26%, 100% 50%, 78% 34%, 76% 46%, 5% 42%, 1% 8%);
+  }
+}

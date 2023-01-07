@@ -35,3 +35,26 @@
   left: 0;
   top: 62px;
 }
+
+.MichalIcon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 2px solid black;
+  overflow: hidden;
+  position: relative;
+  left: 65px;
+  top: 20px;
+
+  img {
+    object-fit: cover;
+    height: 90px;
+    position: relative;
+    scale: 4;
+    top: 81px;
+    left: -13px;
+  }
+}

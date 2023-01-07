@@ -1,3 +1,61 @@
 .guest {
   display: flex;
+  position: relative;
+}
+
+.backButton {
+  clip-path: polygon(80% 10%, 77% 48%, 2% 44%, 0 7%);
+  background-color: black;
+  height: 90px;
+  width: 100px;
+  left: 270px;
+  top: 140px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    color: black;
+    z-index: 18;
+    text-align: center;
+    top: -20px;
+    left: -8px;
+    position: relative;
+    font-weight: 600;
+  }
+}
+.backButton::before {
+  clip-path: polygon(78% 12%, 76% 46%, 5% 42%, 1% 8%);
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
+}
+
+.backButton:hover {
+  cursor: pointer;
+  &::before {
+    animation: animateHover 2s infinite;
+  }
+}
+
+@keyframes animateHover {
+  0% {
+    clip-path: polygon(78% 12%, 76% 46%, 5% 42%, 1% 8%);
+  }
+  25% {
+    clip-path: polygon(77% 12%, 75% 46%, 4% 42%, 2% 8%);
+  }
+  50% {
+    clip-path: polygon(78% 12%, 76% 46%, 5% 42%, 1% 8%);
+  }
+  75% {
+    clip-path: polygon(77% 13%, 75% 45%, 4% 41%, 2% 10%);
+  }
+  100% {
+    clip-path: polygon(78% 12%, 76% 46%, 5% 42%, 1% 8%);
+  }
 }

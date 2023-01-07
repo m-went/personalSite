@@ -14,7 +14,6 @@ function AboutMe(props) {
   }
 
   useEffect(() => {
-    console.log(isInfoShown);
     function watchScroll() {
       window.addEventListener('scroll', logit);
     }

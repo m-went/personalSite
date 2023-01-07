@@ -1,14 +1,14 @@
 import styles from './AnimatedText.module.scss';
 import { TypeAnimation } from 'react-type-animation';
 
-function AnimatedText(props) {
+function AnimatedText({ sequence, wrapper, speed }) {
   return (
     <div>
       <TypeAnimation
-        sequence={['Hi! I am Michał!', 2000, 'Cześć! Jestem Michał!', 2000]}
-        speed={15}
+        sequence={sequence}
+        speed={speed}
         deletionSpeed={25}
-        wrapper="h1"
+        wrapper={wrapper}
         repeat={Infinity}
         cursor={false}
         className={`${styles.cursor}`}

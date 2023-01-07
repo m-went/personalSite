@@ -1,28 +1,20 @@
 import styles from './TextBox.module.scss';
+import QuestionBox from '../QuestionBox/QuestionBox';
+import AnswerBox from '../AnswerBox/AnswerBox';
 
-function TextBox({ user }) {
+function TextBox({ user, questionTop, questionBot, answer, choseQuestion, clickedQuestions }) {
   let dialog;
-
-  if (user !== 'guest') {
+  if (user === 'guest') {
     dialog = (
-      <div className={`${styles.textBoxVerticalVersion}`}>
-        <p className={`${styles.text}`}>
-          Some text lorem ipsum askidn askidbn kadbn kads ijausd habds ja bnbhjas ahsbd jh abyhsd a jhsbdjahbds jahbsd
-          ja jahbd jhb d
-        </p>
-      </div>
+      <QuestionBox
+        questionBot={questionBot}
+        questionTop={questionTop}
+        choseQuestion={choseQuestion}
+        clickedQuestions={clickedQuestions}
+      />
     );
   } else {
-    dialog = (
-      <div className={`${styles.questions}`}>
-        <div className={`${styles.question}`}>
-          <p className={`${styles.questionText}`}>NNNNNNNNNNNNNNNNNNNNNNNNNNNN</p>
-        </div>
-        <div className={`${styles.question} ${styles.questionBot}`}>
-          <p className={`${styles.questionText} ${styles.questionTextBot}`}>NNNNNNNNNNNNNNNNNNNNNNNNNNNN</p>
-        </div>
-      </div>
-    );
+    dialog = <AnswerBox answer={answer} />;
   }
   return dialog;
 }

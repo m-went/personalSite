@@ -4,9 +4,23 @@
   color: themeVariables.$mainText;
 }
 
+.arrowUp {
+  transform: rotateX(180deg);
+}
+
 .arrowContainer {
   position: relative;
   margin-top: 30px;
+  z-index: 3;
+}
+
+.arrowAnswerContainer {
+  position: absolute;
+  margin-top: 0;
+  width: 52px;
+  top: 245px;
+  left: 310px;
+  z-index: 3;
 }
 
 .arrowContainer:hover {
