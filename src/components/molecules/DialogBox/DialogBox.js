@@ -5,7 +5,7 @@ import QuestionBox from '../../atoms/QuestionBox/QuestionBox';
 import AnswerBox from '../../atoms/AnswerBox/AnswerBox';
 import useDialog from '../../../hooks/useDialog';
 
-function DialogBox(props) {
+function DialogBox({ closeDialog }) {
   const {
     actualQuestions,
     actualAnswer,
@@ -15,10 +15,19 @@ function DialogBox(props) {
     isScrolledDown,
     answerBoxArrowScroll,
     choseQuestion,
+    isTopLevelQuestion,
   } = useDialog(QandA);
 
+  const handleBackAndExit = () => {
+    if (isTopLevelQuestion) {
+      closeDialog();
+    } else {
+      goBack();
+    }
+  };
+
   return (
-    <div>
+    <div className={`${styles.dialogBox}`}>
       <div className={`${styles.guest}`}>
         <QuestionBox
           questionBot={actualQuestions[0]}
@@ -26,8 +35,8 @@ function DialogBox(props) {
           choseQuestion={choseQuestion}
           clickedQuestions={clickedQuestions}
         />
-        <UserIcon user="guest" />
-        <button onClick={goBack} className={`${styles.backButton}`}>
+        <UserIcon purpose="guestQuestions" />
+        <button onClick={handleBackAndExit} className={`${styles.backButton}`}>
           <span>{goBackText}</span>
         </button>
       </div>

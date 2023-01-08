@@ -6,6 +6,7 @@ function useDialog(questionsArray = []) {
   const [actualAnswer, setActualAnswer] = useState('');
   const [goBackText, setGoBackText] = useState('Exit');
   const [isScrolledDown, setIsScrolledDown] = useState(false);
+  const [isTopLevelQuestion, setIsTopLevelQuestion] = useState(true);
 
   const addQuestionToClicked = (question) => {
     //Check if there are child questions
@@ -49,9 +50,8 @@ function useDialog(questionsArray = []) {
   //returning to previous questions or closing entire dialog
   const goBack = () => {
     //exit dialog if there is no parent questions to return to
-    if (actualQuestions[0].id[3] === '0') {
-      //There will be function to close dialog
-      console.log('top level - close');
+    if (actualQuestions[0].id[2] === '0') {
+      setIsTopLevelQuestion(true);
     } else {
       //Show parent questions and check if both of their children are clicked
       setTimeout(() => {
@@ -61,6 +61,7 @@ function useDialog(questionsArray = []) {
         addQuestionToClicked(higherLevelQuestions[1]);
         setActualQuestions(higherLevelQuestions);
         setGoBackText('Exit');
+        setIsTopLevelQuestion(true);
       }, 100);
     }
     //Clear answerBox
@@ -75,6 +76,7 @@ function useDialog(questionsArray = []) {
       //If there are next questions show them
       setActualQuestions(question.nextQuestions);
       setGoBackText('Go Back');
+      setIsTopLevelQuestion(false);
     }
     //Show answer to chosen question
     setActualAnswer(question.answer);
@@ -84,7 +86,7 @@ function useDialog(questionsArray = []) {
   };
 
   const resetAnswerPosition = () => {
-    window.document.childNodes[1].children[1].children[1].children[0].children[8].children[0].children[2].children[0].children[0].scrollTop = 0;
+    window.document.childNodes[1].children[1].children[1].children[0].children[8].children[2].children[0].children[0].scrollTop = 0;
   };
 
   const answerBoxArrowScroll = () => {
@@ -92,7 +94,7 @@ function useDialog(questionsArray = []) {
       resetAnswerPosition();
       setIsScrolledDown(false);
     } else {
-      window.document.childNodes[1].children[1].children[1].children[0].children[8].children[0].children[2].children[0].children[0].scrollTop = 100;
+      window.document.childNodes[1].children[1].children[1].children[0].children[8].children[2].children[0].children[0].scrollTop = 100;
       setIsScrolledDown(true);
     }
   };
@@ -106,6 +108,7 @@ function useDialog(questionsArray = []) {
     isScrolledDown,
     answerBoxArrowScroll,
     choseQuestion,
+    isTopLevelQuestion,
   };
 }
 
