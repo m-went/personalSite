@@ -1,27 +1,24 @@
 import { ReactComponent as ScrollArrow } from '../../../assets/icons/arrow.svg';
 import styles from './Arrow.module.scss';
-import { useState } from 'react';
 
-function Arrow({ location, answer }) {
-  const [isScrolledDown, setIsScrolledDown] = useState(false);
-  const scrollFunction = (e) => {
-    if (location === 'main') {
-      window.scroll({
-        top: window.innerHeight - 50,
-        left: 0,
-        behavior: 'smooth',
-      });
-    } else {
-      if (isScrolledDown) {
-        e.nativeEvent.path[2].firstChild.scrollTop = 0;
-        setIsScrolledDown(false);
-      } else {
-        e.nativeEvent.path[2].firstChild.scrollTop = 100;
-        setIsScrolledDown(true);
-      }
-    }
+function Arrow({ location, answer, isScrolledDown, scrollAnswer }) {
+  const scrollMainPage = (e) => {
+    window.scroll({
+      top: window.innerHeight - 50,
+      left: 0,
+      behavior: 'smooth',
+    });
   };
+
+  //Set scrollFunction to move window if it's arrow at the end of main page or scroll answerBox content if it's Arrow in answerBox
+  let scrollFunction;
+  if (scrollAnswer) {
+    scrollFunction = scrollAnswer;
+  } else {
+    scrollFunction = scrollMainPage;
+  }
   let scrollArrow;
+  //Show scrollArrow only if answerBox isn't empty
   if (answer !== '') {
     scrollArrow = (
       <>
