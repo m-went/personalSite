@@ -2,13 +2,13 @@
 @use '../../../themeVariables.module.scss';
 
 .skillInfo {
-  background-color: themeVariables.$skillBg;
+  background-color: black;
   border-radius: 27% 39% 44% 25% / 27% 27% 31% 48%;
   color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px;
+  margin: 20px;
   transition: background-color 0.5s ease-out;
   position: relative;
 }
@@ -17,21 +17,12 @@
 }
 .skillName {
   font-weight: 600;
-  transform: translateY(50px);
-  opacity: 0;
-  transition: all 0.2s;
-}
-
-.skillInfo:hover {
-  .skillName {
-    opacity: 1;
-    transform: translateY(0px);
-  }
+  color: white;
 }
 
 .skillInfo span:nth-child(1) {
   position: absolute;
-  border: 2px solid black;
+  border: 2px solid white;
   top: 0;
   left: 0;
   width: 100%;
@@ -42,7 +33,7 @@
 
 .skillInfo span:nth-child(2) {
   position: absolute;
-  border: 2px solid black;
+  border: 2px solid white;
   top: 0;
   left: 0;
   width: 100%;
@@ -53,7 +44,7 @@
 
 .skillInfo span:nth-child(3) {
   position: absolute;
-  border: 2px solid black;
+  border: 2px solid white;
   top: 0;
   left: 0;
   width: 100%;
@@ -64,7 +55,7 @@
 
 .skillInfo span:nth-child(4) {
   position: absolute;
-  border: 2px solid black;
+  border: 2px solid white;
   top: 0;
   left: 0;
   width: 100%;

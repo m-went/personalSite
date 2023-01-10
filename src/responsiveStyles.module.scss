@@ -245,18 +245,19 @@
   }
   .skillName {
     font-size: 0.7rem;
+    transform: translateY(12px);
   }
   .skillInfo {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
   .skillsText {
     width: 100%;
   }
   .skillsList {
     justify-content: center;
-    padding: 0;
-    width: 100%;
+    padding: 0 5px;
+    width: 100vw;
   }
   .skillsInfo {
     flex-direction: column;
