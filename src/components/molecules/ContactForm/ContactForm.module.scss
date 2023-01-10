@@ -8,30 +8,128 @@
 
   label {
     margin: 10px 0;
+    font-weight: 600;
   }
+}
+
+input:focus {
+  outline: none;
+}
+textarea:focus {
+  outline: none;
 }
 
 .formButton {
   width: 40%;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 10px;
+  margin-top: 45px;
   border: none;
   margin-left: auto;
   cursor: pointer;
-  transition: all 1s;
-  clip-path: polygon(19% 0, 89% 0, 81% 100%, 11% 100%);
-}
-
-.formButton:hover {
+  clip-path: polygon(96% 10%, 100% 97%, 6% 92%, 0 10%);
   background-color: white;
-  animation: animateHoverBg 2s infinite;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    color: white;
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+  }
+}
+.formButton::before {
+  clip-path: polygon(93% 14%, 95% 91%, 9% 88%, 2% 13%);
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
 }
 
+.errorMessage {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 .validationError {
-  margin-top: 5px;
-  color: themeVariables.$error;
+  margin: 0px;
+  color: white;
+  position: relative;
+  font-weight: 600;
+  text-align: center;
 }
 
+.errorInfo {
+  position: relative;
+  margin-top: 15px;
+  flex: 1;
+  height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.errorInfo::before {
+  clip-path: polygon(96% 5%, 95% 100%, 3% 100%, 2% 5%);
+  background-color: rgb(160, 53, 53);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: '';
+}
+
+.exclamationIcon {
+  flex-direction: column;
+  display: flex;
+  width: 10%;
+  margin-top: -8px;
+  position: absolute;
+  right: -37px;
+}
+.exclamation {
+  clip-path: polygon(100% 5%, 57% 64%, 3% 54%, 8% 0%);
+  position: relative;
+  height: 100px;
+  width: 23px;
+  background-color: black;
+}
+
+.exclamation::before {
+  clip-path: polygon(100% 5%, 64% 52%, 28% 45%, 33% 0%);
+  background-color: red;
+  position: absolute;
+  top: 3px;
+  left: -3px;
+  height: 100%;
+  width: 100%;
+  content: '';
+}
+
+.exclamationDot {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  border-radius: 50%;
+  top: -38px;
+  left: -5px;
+}
+
+.exclamationDot::before {
+  background-color: red;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  height: 70%;
+  width: 70%;
+  content: '';
+  border-radius: 50%;
+}
 textarea {
   resize: none;
 }

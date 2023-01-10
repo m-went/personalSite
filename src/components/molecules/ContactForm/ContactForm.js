@@ -42,7 +42,15 @@ function ContactForm(props) {
       <label htmlFor="email">Your email:</label>
       <input type="email" name="email" id="email" value={mail.email} onChange={handleInputChange} required />
       {validationMessages.emailError ? (
-        <p className={`${styles.validationError}`}>{`${validationMessages.emailError}`}</p>
+        <div className={`${styles.errorMessage}`}>
+          <div className={`${styles.errorInfo}`}>
+            <p className={`${styles.validationError}`}>{`${validationMessages.emailError}`}</p>
+          </div>
+          <div className={`${styles.exclamationIcon}`}>
+            <div className={`${styles.exclamation}`}></div>
+            <div className={`${styles.exclamationDot}`}></div>
+          </div>
+        </div>
       ) : null}
       <label htmlFor="name">Your name:</label>
       <input type="text" name="name" id="name" value={mail.name} onChange={handleInputChange} />
@@ -57,10 +65,18 @@ function ContactForm(props) {
         required
       />
       {validationMessages.messageError ? (
-        <p className={`${styles.validationError}`}>{`${validationMessages.messageError}`}</p>
+        <div className={`${styles.errorMessage}`}>
+          <div className={`${styles.errorInfo}`}>
+            <p className={`${styles.validationError}`}>{`${validationMessages.messageError}`}</p>
+          </div>
+          <div className={`${styles.exclamationIcon}`}>
+            <div className={`${styles.exclamation}`}></div>
+            <div className={`${styles.exclamationDot}`}></div>
+          </div>
+        </div>
       ) : null}
       <button className={`${styles.formButton}`} type="submit">
-        Send me a message
+        <span>Send me a message</span>
       </button>
       {isSendError ? <Error /> : null}
       {isMessageSent ? <SuccessInfo /> : null}
