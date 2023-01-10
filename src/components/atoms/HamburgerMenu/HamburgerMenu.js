@@ -4,21 +4,31 @@ function HamburgerMenu({ isOpen, toggleBurger }) {
   const mobileNavbar = (
     <nav className={`${styles.mobileNavbar}`}>
       <ul className={`${styles.mobileNavList}`}>
-        <a className={`${styles.mobileNavSection}`} href="#root">
-          <li>Home</li>
-        </a>
-        <a className={`${styles.mobileNavSection}`} href="#about-me">
-          <li>About me</li>
-        </a>
-        <a className={`${styles.mobileNavSection}`} href="#skills">
-          <li>Skills</li>
-        </a>
-        <a className={`${styles.mobileNavSection}`} href="#projects">
-          <li>Projects</li>
-        </a>
-        <a className={`${styles.mobileNavSection}`} href="#contact">
-          <li>Contact</li>
-        </a>
+        <div className={`${styles.mobileNavComicStyle}`}>
+          <a className={`${styles.mobileNavSection}`} href="#root">
+            <li>Home</li>
+          </a>
+        </div>
+        <div className={`${styles.mobileNavComicStyle}`}>
+          <a className={`${styles.mobileNavSection}`} href="#about-me">
+            <li>About me</li>
+          </a>
+        </div>
+        <div className={`${styles.mobileNavComicStyle}`}>
+          <a className={`${styles.mobileNavSection}`} href="#skills">
+            <li>Skills</li>
+          </a>
+        </div>
+        <div className={`${styles.mobileNavComicStyle}`}>
+          <a className={`${styles.mobileNavSection}`} href="#projects">
+            <li>Projects</li>
+          </a>
+        </div>
+        <div className={`${styles.mobileNavComicStyle}`}>
+          <a className={`${styles.mobileNavSection}`} href="#contact">
+            <li>Contact</li>
+          </a>
+        </div>
       </ul>
     </nav>
   );
