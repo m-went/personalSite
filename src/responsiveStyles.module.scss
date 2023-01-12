@@ -2,24 +2,11 @@
   .aboutMainInfo {
     padding: 0 15%;
   }
-  .aboutOutsideColor2 {
-    width: 100%;
-    left: -50px;
-    transform: rotate(10deg) scale(1.2);
-    height: 100%;
-  }
   .singleProject {
     margin: 50px 20% 0 20%;
   }
 }
 @media (max-width: 1600px) {
-  .aboutOutsideColor2 {
-    width: 90%;
-    top: 10px;
-    left: -10px;
-    transform: rotate(10deg) scale(1.4);
-    height: 90%;
-  }
   .aboutMainInfo {
     padding: 0 5%;
   }
@@ -27,16 +14,7 @@
     margin: 10% 2% 0 2%;
   }
 }
-@media (max-width: 1400px) {
-  .aboutOutsideColor2 {
-    width: 100%;
-  }
-}
-@media (max-width: 1200px) {
-  .aboutOutsideColor2 {
-    width: 110%;
-  }
-}
+
 @media (min-width: 1201px) {
   .projectName {
     margin-top: 1.5em;
@@ -67,11 +45,9 @@
 }
 
 @media (max-width: 1024px) {
-  .aboutOutsideColor2 {
-    width: 120%;
-  }
   .projectName {
     margin-top: 5px;
+    margin-bottom: 15px;
   }
   .aboutMainInfo {
     padding: 0;
@@ -91,29 +67,15 @@
   .aboutMainInfo {
     flex-direction: row;
   }
-  .aboutOutsideColor2 {
-    top: 25px;
-  }
   .showFromRight {
     padding-top: 0px;
   }
   .skillsList {
     width: 50vw;
   }
-  .skillsOutsideColor {
-    top: -20px;
-    transform: rotate(-10deg) scale(1.1);
-  }
 }
 
 @media (max-width: 800px) {
-  .aboutOutsideColor2 {
-    width: 150%;
-    top: 10px;
-    left: -50px;
-    transform: rotate(10deg) scale(1.2);
-    height: 100%;
-  }
   .aboutMainInfo {
     flex-direction: column;
     align-items: center;
@@ -121,10 +83,7 @@
   .showFromRight {
     padding-top: 40px;
   }
-  .skillsOutsideColor {
-    top: -20px;
-    transform: rotate(-10deg);
-  }
+
   .skillsList {
     width: 80vw;
   }
@@ -211,22 +170,8 @@
   .imgWrapper {
     left: -800px;
   }
-  .aboutOutsideColor2 {
-    top: 10px;
-  }
-  .aboutOutsideColor {
-    left: 50px;
-    top: -20px;
-    transform: rotate(-10deg) scale(1.1);
-  }
   .showFromRight {
     padding-bottom: 0px;
-  }
-  .skillsOutsideColor {
-    top: -20px;
-  }
-  .singleProjectOutsideColor {
-    height: 100%;
   }
 }
 @media (max-width: 480px) {
@@ -295,30 +240,14 @@
   .imgWrapper {
     left: -785px;
   }
-  .aboutOutsideColor2 {
-    top: -10px;
-  }
-  .aboutOutsideColor {
-    left: 0px;
-    top: 82px;
-    transform: rotate(-10deg) scale(1.22);
-  }
-
   .showFromRight {
     padding-top: 40px;
     padding-bottom: 100px;
   }
-  .skillsOutsideColor {
-    top: 40px;
-    transform: rotate(-10deg) scale(1.1);
-  }
   .singleProject {
-    margin: 10% 2% 0 2%;
+    margin: 5% 2% 0 2%;
   }
   .projectInfo {
     margin-top: 0;
-  }
-  .singleProjectOutsideColor {
-    height: 120%;
   }
 }

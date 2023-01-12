@@ -1,43 +1,57 @@
 import styles from './Projects.module.scss';
-import SingleProject from '../../atoms/SingleProject/SingleProject';
-import ventus from '../../../assets/imgs/ventusV2.png';
-import myPage from '../../../assets/imgs/myPageV4.png';
+import ProjectOverview from '../../molecules/ProjectOverview/ProjectOverview';
+import allProjects from '../../../assets/data/projects';
+import { useState } from 'react';
 
 function Projects(props) {
-  const allProjects = [
-    {
-      name: 'Ventus page',
-      url: 'https://ventusb.pl',
-      photo: ventus,
-      description: 'My first full crud page using HTML, CSS, JS, Express, Mongo and Node',
-      transform: ' rotate(-10deg) scale(1)',
-    },
-    {
-      name: 'My personal page',
-      url: '/',
-      photo: myPage,
-      description: 'As You can see, page to show my humble person',
-      transform: 'rotate(10deg) scale(1)',
-    },
-  ];
-  const projects = allProjects.map((p) => {
-    return (
-      <SingleProject
-        name={p.name}
-        url={p.url}
-        photo={p.photo}
-        description={p.description}
-        key={p.url}
-        transform={p.transform}
-      />
-    );
-  });
+  const [visibleProject, setVisibleProject] = useState(allProjects[0]);
+
+  const handleNextClick = () => {
+    let idx;
+
+    for (let i = 0; i < allProjects.length; i++) {
+      if (allProjects[i].id === visibleProject.id) {
+        idx = i;
+      }
+    }
+
+    let nextIdx;
+    if (idx + 1 >= allProjects.length) {
+      nextIdx = 0;
+    } else nextIdx = idx + 1;
+    setVisibleProject(allProjects[nextIdx]);
+  };
+  const handlePreviousClick = () => {
+    let idx;
+    for (let i = 0; i < allProjects.length; i++) {
+      if (allProjects[i].id === visibleProject.id) {
+        idx = i;
+      }
+    }
+    let nextIdx;
+    if (idx - 1 < 0) {
+      nextIdx = allProjects.length - 1;
+    } else nextIdx = idx - 1;
+    setVisibleProject(allProjects[nextIdx]);
+  };
+
+  /* 
+    const nextProjectNum = (parseFloat(visibleProject.id.slice(-2)) + 1).toString().padStart(2, '0');
+    const nextProjectLink = visibleProject.id.slice(0, 8) + nextProjectNum;
+    const prevProjectNum = (parseFloat(visibleProject.id.slice(-2)) - 1).toString().padStart(2, '0');
+    const prevProjectLink = visibleProject.id.slice(0, 8) + prevProjectNum; */
+
   return (
     <section id="projects" className={`${styles.projects}`}>
       <h2>So, You want to see, what I have already done?</h2>
-      {projects}
-      <p className={`${styles.nextProjects}`}>And more to come...</p>
-      <div className={`${styles.angle}`} />
+      <div className={`${styles.projectsFrame}`}>
+        <ProjectOverview
+          visibleProject={visibleProject}
+          allProjects={allProjects}
+          handleNextClick={handleNextClick}
+          handlePreviousClick={handlePreviousClick}
+        />
+      </div>
     </section>
   );
 }

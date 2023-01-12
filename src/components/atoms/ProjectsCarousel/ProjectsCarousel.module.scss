@@ -1,0 +1,134 @@
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.carousel {
+  $carousel: &;
+
+  position: relative;
+  counter-reset: carousel;
+  z-index: 3;
+  width: 95%;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__list {
+    @include hide-scrollbar;
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+
+  &__item {
+    position: relative;
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 100%;
+    scroll-snap-align: center;
+    counter-increment: carousel;
+  }
+
+  &__item::before {
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: '';
+  }
+
+  &__slide {
+    display: flex;
+    clip-path: polygon(98% 4%, 98% 100%, 2% 98%, 2% 10%);
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  @mixin nav-base-styling {
+    $nav-size: 40px;
+
+    position: absolute;
+    top: 50%;
+    width: $nav-size;
+    height: $nav-size;
+    margin-top: calc(#{$nav-size} / -2);
+    border-radius: 50%;
+
+    &__prev {
+      left: 0px;
+    }
+    &__prev::before {
+      clip-path: polygon(41% 50%, 86% 99%, 51% 98%, 3% 50%, 54% 0%, 83% 9%);
+      background-color: red;
+      position: absolute;
+      top: -2px;
+      left: 1px;
+      height: 110%;
+      width: 110%;
+      content: '';
+    }
+
+    &__next {
+      right: 0px;
+    }
+
+    &__next::before {
+      clip-path: polygon(59% 50%, 14% 99%, 49% 98%, 97% 50%, 46% 0%, 17% 9%);
+      background-color: red;
+      position: absolute;
+      top: -2px;
+      left: -6px;
+      height: 110%;
+      width: 110%;
+      content: '';
+    }
+  }
+
+  &__nav {
+    @include nav-base-styling;
+
+    color: transparent;
+    overflow: hidden;
+  }
+
+  &__navDummy {
+    @include nav-base-styling;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    color: white;
+    transform-origin: 50% 50%;
+    transition: transform 200ms ease, opacity 200ms ease;
+  }
+}
+
+.icon {
+  display: block;
+  width: 3em;
+  height: 3em;
+  fill: currentColor;
+  z-index: 1;
+}
